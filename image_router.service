@@ -1,0 +1,13 @@
+[Unit]
+Description=image-router service
+After=network.target
+Requires=network.target
+
+[Service]
+Type=simple
+User=image-router
+Group=www-data
+ExecStart=/usr/local/bin/image_router.py
+
+[Install]
+WantedBy=multi-user.target
